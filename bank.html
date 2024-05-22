@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank inside</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1 class="text-5xl text-center mt-6 mb-8">
+          Let's get spme
+          <span class="font-semibold text-violet-500">money</span>
+        </h1>
+      </header>
+
+      <div class="grid grid-cols-3 gap-4 text-white w-9/12 mx-auto">
+        <div class="bg-yellow-500 p-6 rounded-2xl">
+          <h4 class="text-3xl mb-2">Deposit</h4>
+          <h3 class="text-5xl">$<span id="deposit_amount">00</span></h3>
+        </div>
+
+        <div class="bg-pink-500 p-6 rounded-2xl">
+          <h4 class="text-3xl mb-2">Withdraw</h4>
+          <h3 class="text-5xl">$<span id="previous_withdraw">00</span></h3>
+        </div>
+
+        <div class="bg-sky-500 p-6 rounded-2xl">
+          <h4 class="text-3xl mb-2">Balance</h4>
+          <h3 class="text-5xl">$<span id="previous_balance">1240</span></h3>
+        </div>
+      </div>
+    </section>
+    <!-- deposit and withdraw -->
+    <section class="mt-5">
+      <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto">
+        <div class="bg-green-400 p-6 rounded-2xl">
+          <h4 class="text-3xl mb-6 text-white">Please Deposit</h4>
+
+          <input
+            id="provite_deposit"
+            class="px-2 block w-9/12 mb-3 outline-0"
+            type="text"
+            name=""
+            placeholder="$ Amount You Want to Deposit"
+          />
+
+          <button
+            id="deposit-btn"
+            class="bg-amber-600 hover:bg-sky-700 ease-linear duration-100 py-2 px-6 text-white font-medium rounded-md"
+          >
+            Deposit
+          </button>
+        </div>
+        <!-- ================================ -->
+        <div class="bg-indigo-500 p-6 rounded-2xl">
+          <h4 class="text-3xl mb-6 text-white">Please Withdraw</h4>
+          <input
+            class="px-2 block w-9/12 mb-3 outline-0"
+            type="text"
+            name=""
+            id="withdraw_amount"
+            placeholder="$ Amount You Want to Wirhdraw"
+          />
+          <button
+            id="withdraw-btn"
+            class="bg-amber-600 hover:bg-amber-400 ease-linear duration-100 py-2 px-6 text-white font-medium rounded-md"
+          >
+            Withdraw
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="js/tailwind.config.js"></script>
+    <script src="js/bank.js"></script>
+    <script src="js/withdraw.js"></script>
+  </body>
+</html>
